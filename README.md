@@ -1,3 +1,5 @@
+This project is a part of the IOT project of 42. This is a small web server to test deployments.
+
 To build the project you need python3, python3-venv, pip and of course flask.
 
 The image is currently pushed there : https://hub.docker.com/repository/docker/lobbyra/miniweb/general
