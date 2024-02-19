@@ -1,10 +1,12 @@
 from flask import Flask
 
-app = Flask(__name__)
 
 import platform,socket,re,uuid,json,logging
 from flask import request
 import os
+
+app = Flask(__name__)
+os.system("touch /var/miniweb/chat")
 
 def getSystemInfo():
     try:

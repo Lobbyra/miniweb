@@ -5,7 +5,7 @@ FROM python:3.8-slim-buster
 
 WORKDIR "/app"
 
-RUN pip install flask && mkdir -p /var/miniweb && touch /var/miniweb/chat
+RUN pip install flask && mkdir -p /var/miniweb
 
 EXPOSE 8080
 
