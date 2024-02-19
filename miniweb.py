@@ -33,3 +33,16 @@ def hello_world():
         appInfo = "App name not found ! Set the env var APPNAME"
     reqInfo = "<p> Host: " + request.host + "</p>"
     return title + sysInfo + appInfo + reqInfo
+
+@app.route("/chat", methods = ['GET'])
+def chatGet():
+    with open('/var/miniweb/chat', 'r') as file:
+        data = file.read().rstrip()
+    return data
+
+@app.route("/chat", methods = ['POST'])
+def chatPost():
+    f = open("/var/miniweb/chat", "a")
+    f.write(request.get_data(as_text=True).split("\n")[0] + "\n")
+    f.close()
+    return "ok"
